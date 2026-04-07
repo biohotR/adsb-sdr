@@ -102,16 +102,6 @@ The app persists three data domains:
 - `aircraft_stats` - rolling per-aircraft aggregate metrics
 - `aircraft_history` - time-series trajectory snapshots
 
-On startup, persisted state is loaded into memory so history survives restarts.
-
-## Tomorrow demo flow (3-4 minutes)
-
-1. Start in simulation mode and show moving traffic.
-2. Click one aircraft and explain profile + hobbyist metrics.
-3. Show route trail and external hobbyist links.
-4. Open `/status` to explain mode and persistence metadata.
-5. Restart app and show that history/statistics persist.
-
 ## Project structure
 
 ```text
