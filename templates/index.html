@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS-B Flight Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div id="sidebar">
+        <h2>✈️ Aircraft Tracker</h2>
+        <div id="status">
+            <span id="mode-badge">SIMULATION</span>
+            <span id="aircraft-count">0 aircraft</span>
+        </div>
+        <div id="data-health" class="loading">Connecting to receiver...</div>
+        <div id="legend">
+            <div class="legend-item"><span class="dot" style="background:#e94560"></span> Low (&lt;10k)</div>
+            <div class="legend-item"><span class="dot" style="background:#FF9800"></span> Mid</div>
+            <div class="legend-item"><span class="dot" style="background:#4CAF50"></span> Cruise</div>
+            <div class="legend-item"><span class="dot" style="background:#2196F3"></span> High (&gt;30k)</div>
+        </div>
+        <div id="aircraft-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight</th>
+                        <th>Alt (ft)</th>
+                        <th>Spd</th>
+                        <th>Hdg</th>
+                    </tr>
+                </thead>
+                <tbody id="aircraft-table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="detail-panel">
+        <div class="detail-panel-header">
+            <h3>Aircraft Details</h3>
+            <button onclick="hideDetails()" class="close-btn">✕</button>
+        </div>
+        <div id="detail-content"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
